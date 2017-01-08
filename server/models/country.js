@@ -22,7 +22,7 @@ function Country() {
             utils.getFile('../geojson/' +
                 utils.countryCodeToAlpha3(code) +
                 '.json'
-            ).features[0].geometry.coordinates);
+            ).features[0].geometry);
     };
 }
 
