@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyparser = require('body-parser');
 
-var configs = require('./config/config' + (process.env.NODE_ENV || ''));
+var configs = require('./config/config');
 var connection = require('./server/db/connection');
 var routes = require('./server/routes/routes');
 
