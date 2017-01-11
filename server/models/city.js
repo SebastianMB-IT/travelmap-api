@@ -1,21 +1,6 @@
 var connection = require('../db/connection');
 
 function City() {
-    this.getCountries = function (res) {
-        connection.acquire(function (err, con) {
-            con.query('SELECT country_code FROM city GROUP BY country_code', function (err, result) {
-                con.release();
-                if (err) {
-                    res.status(500).json({
-                        message: 'Get all countries failed: ' + err
-                    });
-                } else {
-                    res.status(200).json(result);
-                }
-            });
-        });
-    };
-
     this.getAll = function (res) {
         connection.acquire(function (err, con) {
             con.query('SELECT * FROM city', function (err, result) {
@@ -83,9 +68,7 @@ function City() {
                     }
                 }
             })
-
         });
-
     };
 
     this.update = function (id, city, res) {
