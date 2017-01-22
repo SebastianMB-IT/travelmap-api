@@ -48,7 +48,8 @@ function City() {
                                 });
                             } else {
                                 res.status(201).json({
-                                    message: 'City created successfully'
+                                    message: 'City created successfully',
+                                    id: result.insertId
                                 });
                             }
                         });
@@ -61,7 +62,8 @@ function City() {
                                 });
                             } else {
                                 res.status(201).json({
-                                    message: 'City created successfully'
+                                    message: 'City created successfully',
+                                    id: result.insertId
                                 });
                             }
                         });
